@@ -1,227 +1,193 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: #fff;
-    line-height: 1.7;
+body{
+    background:#000;
+    color:#fff;
 }
 
-/* ================= CONTAINER ================= */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-/* ================= HEADER ================= */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    z-index: 1000;
+/* NAVBAR */
+header{
+    padding:20px 0;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#d4af37;
 }
 
-.logo span {
-    color: #D4AF37;
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
 }
 
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
+.menu a:hover{
+    color:#d4af37;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    transition: 0.3s;
+/* HERO */
+.hero{
+    padding:120px 0;
+    text-align:center;
 }
 
-nav a:hover {
-    color: #D4AF37;
+.hero h1{
+    font-size:3rem;
+    color:#d4af37;
 }
 
-/* ================= BOTÕES PREMIUM ================= */
-.btn-primary, .btn-secondary {
-    background: linear-gradient(45deg, #D4AF37, #b8962e);
-    color: #000;
-    padding: 12px 28px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: 0.4s;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
+.hero p{
+    margin-top:20px;
+    opacity:.8;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
-    box-shadow: 0 0 20px #D4AF37, 0 0 40px rgba(212, 175, 55, 0.5);
-    transform: translateY(-4px);
+.btn-dourado{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    background:#d4af37;
+    color:#000;
+    font-weight:600;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
 }
 
-/* ================= HERO PREMIUM ================= */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle at top, #111 0%, #000 70%);
-    padding-top: 100px;
+.btn-dourado:hover{
+    transform:scale(1.05);
 }
 
-.hero h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 20px;
+/* PROVA SOCIAL */
+.prova-social{
+    padding:100px 0;
+    text-align:center;
+    background:#0a0a0a;
 }
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #ccc;
-    margin-bottom: 40px;
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:50px;
+    flex-wrap:wrap;
 }
 
-/* ================= CURSOS PREMIUM ================= */
-.cursos {
-    padding: 120px 0;
-    text-align: center;
+.stat-box{
+    background:#111;
+    padding:40px;
+    border-radius:15px;
+    width:220px;
+    border:1px solid #d4af37;
 }
 
-.cursos h2 {
-    font-size: 36px;
-    color: #D4AF37;
-    margin-bottom: 60px;
+.stat-box h3{
+    color:#d4af37;
+    font-size:2rem;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+/* PRODUTOS */
+.produtos{
+    padding:100px 0;
+    text-align:center;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 40px 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
+.produtos-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:50px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: #D4AF37;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+.produto-card{
+    background:#111;
+    padding:30px;
+    width:300px;
+    border-radius:15px;
+    border:1px solid #d4af37;
+    transition:.3s;
 }
 
-.card h3 {
-    margin-bottom: 20px;
-    font-size: 20px;
+.produto-card:hover{
+    transform:translateY(-10px);
 }
 
-.card p {
-    color: #bbb;
-    margin-bottom: 25px;
+/* DEPOIMENTOS */
+.depoimentos{
+    padding:100px 0;
+    text-align:center;
+    background:#0a0a0a;
 }
 
-/* ================= SOBRE PREMIUM ================= */
-.sobre {
-    padding: 120px 0;
-    text-align: center;
-    background: #0a0a0a;
+.depoimentos-grid{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:50px;
 }
 
-.sobre h2 {
-    color: #D4AF37;
-    margin-bottom: 30px;
+.depoimento-card{
+    background:#111;
+    padding:30px;
+    width:300px;
+    border-radius:15px;
+    border:1px solid #d4af37;
+    font-style:italic;
 }
 
-.sobre p {
-    max-width: 700px;
-    margin: auto;
-    color: #ccc;
+/* CTA FINAL */
+.oferta-final{
+    padding:120px 0;
+    text-align:center;
 }
 
-/* ================= CONTATO PREMIUM ================= */
-.contato {
-    padding: 120px 0;
-    text-align: center;
+/* CONTATO */
+.contato{
+    padding:100px 0;
+    background:#0a0a0a;
+    text-align:center;
 }
 
-.contato h2 {
-    color: #D4AF37;
-    margin-bottom: 40px;
+form{
+    max-width:500px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
-form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+input, textarea{
+    padding:15px;
+    border-radius:8px;
+    border:none;
+    outline:none;
 }
 
-input, textarea {
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    background: #111;
-    color: #fff;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus, textarea:focus {
-    border-color: #D4AF37;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-}
-
-/* ================= FOOTER ================= */
-footer {
-    padding: 40px 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    text-align: center;
-}
-
-.social a {
-    color: #D4AF37;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social a:hover {
-    text-shadow: 0 0 15px #D4AF37;
-}
-
-/* ================= RESPONSIVO ================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-    }
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    opacity:.6;
 }
